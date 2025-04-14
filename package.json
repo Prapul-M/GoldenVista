@@ -1,0 +1,40 @@
+{
+  "name": "golden-vista",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prapul-M/GoldenVista.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Prapul-M/GoldenVista/issues"
+  },
+  "homepage": "https://github.com/Prapul-M/GoldenVista#readme",
+  "description": "",
+  "dependencies": {
+    "@types/node": "^22.14.1",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "framer-motion": "^12.7.2",
+    "next": "^14.1.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.5.0",
+    "swiper": "^11.2.6",
+    "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.1"
+  }
+}
