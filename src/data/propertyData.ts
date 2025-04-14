@@ -2,28 +2,80 @@
 
 export const villaImages = [
   {
-    src: '/images/villa-pilerne/villa-1.jpg',
+    src: '/images/villa-pilerne/VILLA 4-1.jpg',
     alt: 'Luxury Villa Exterior View',
   },
   {
-    src: '/images/villa-pilerne/villa-2.jpg',
+    src: '/images/villa-pilerne/VILLA 4-2.jpg',
     alt: 'Villa Living Room',
   },
   {
-    src: '/images/villa-pilerne/villa-3.jpg',
-    alt: 'Villa Master Bedroom',
-  },
-  {
-    src: '/images/villa-pilerne/villa-4.jpg',
+    src: '/images/villa-pilerne/VILLA 4-3.jpg',
     alt: 'Villa Kitchen',
   },
   {
-    src: '/images/villa-pilerne/villa-5.jpg',
+    src: '/images/villa-pilerne/VILLA 4-4.jpg',
+    alt: 'Villa Master Bedroom',
+  },
+  {
+    src: '/images/villa-pilerne/VILLA 4-5.jpg',
     alt: 'Villa Bathroom',
   },
   {
-    src: '/images/villa-pilerne/villa-6.jpg',
-    alt: 'Villa Balcony',
+    src: '/images/villa-pilerne/VILLA 4-6.jpg', 
+    alt: 'Villa Swimming Pool',
+  },
+  {
+    src: '/images/villa-pilerne/VILLA 4-7.jpg',
+    alt: 'Villa Garden',
+  },
+  {
+    src: '/images/villa-pilerne/VILLA 4-8.jpg',
+    alt: 'Villa Terrace',
+  },
+  {
+    src: '/images/villa-pilerne/VILLA 4-9.jpg',
+    alt: 'Villa Dining Area',
+  },
+];
+
+// Additional villa images for the detailed view
+export const villaDetailImages = [
+  {
+    src: '/images/villa-pilerne/VILLA 4-10.jpg',
+    alt: 'Villa Front View',
+  },
+  {
+    src: '/images/villa-pilerne/VILLA 4-11.jpg',
+    alt: 'Villa Side View',
+  },
+  {
+    src: '/images/villa-pilerne/VILLA 4-12.jpg',
+    alt: 'Villa Rear View',
+  },
+  {
+    src: '/images/villa-pilerne/VILLA 4-13.jpg',
+    alt: 'Villa Night View',
+  },
+  {
+    src: '/images/villa-pilerne/VILLA 4-14.jpg',
+    alt: 'Villa Aerial View',
+  },
+  {
+    src: '/images/villa-pilerne/VILLA 1-27.jpg', 
+    alt: 'Villa Interior Detail',
+  },
+  {
+    src: '/images/villa-pilerne/VILLA 1-28.jpg',
+    alt: 'Villa Bathroom Detail',
+  },
+  {
+    src: '/images/villa-pilerne/VILLA 1-29.jpg',
+    alt: 'Villa Kitchen Detail',
+  },
+  {
+    src: '/images/villa-pilerne/VILLA 1-30.jpg',
+    alt: 'Villa Outdoor Space',
   },
 ];
 
