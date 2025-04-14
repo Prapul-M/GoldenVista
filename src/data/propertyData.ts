@@ -62,28 +62,36 @@ export const villaDetails = {
 
 export const penthouseImages = [
   {
-    src: '/images/penthouse-terraces/penthouse-1.jpg',
+    src: '/images/penthouse-terraces/1.jpg',
     alt: 'Luxury Penthouse Exterior View',
   },
   {
-    src: '/images/penthouse-terraces/penthouse-2.jpg',
+    src: '/images/penthouse-terraces/2.jpg',
     alt: 'Penthouse Living Room',
   },
   {
-    src: '/images/penthouse-terraces/penthouse-3.jpg',
+    src: '/images/penthouse-terraces/3.jpg',
     alt: 'Penthouse Master Bedroom',
   },
   {
-    src: '/images/penthouse-terraces/penthouse-4.jpg',
+    src: '/images/penthouse-terraces/4.jpg',
     alt: 'Penthouse Kitchen',
   },
   {
-    src: '/images/penthouse-terraces/penthouse-5.jpg',
+    src: '/images/penthouse-terraces/5.jpg',
     alt: 'Penthouse Bathroom',
   },
   {
-    src: '/images/penthouse-terraces/penthouse-6.jpg',
+    src: '/images/penthouse-terraces/6.jpg',
     alt: 'Penthouse Terrace',
+  },
+  {
+    src: '/images/penthouse-terraces/7.jpg',
+    alt: 'Penthouse View',
+  },
+  {
+    src: '/images/penthouse-terraces/8.jpg',
+    alt: 'Penthouse Dining Area',
   },
 ];
 

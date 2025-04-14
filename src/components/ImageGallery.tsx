@@ -20,6 +20,14 @@ interface ImageGalleryProps {
 const ImageGallery = ({ images }: ImageGalleryProps) => {
   const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [imagesLoaded, setImagesLoaded] = useState<{[key: string]: boolean}>({});
+
+  const handleImageLoad = (src: string) => {
+    setImagesLoaded(prev => ({
+      ...prev,
+      [src]: true
+    }));
+  };
 
   return (
     <motion.div
@@ -40,12 +48,19 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
         {images.map((image, index) => (
           <SwiperSlide key={index} className="relative w-full h-full">
             <div className="absolute inset-0 flex items-center justify-center bg-gray-900/50">
+              {!imagesLoaded[image.src] && (
+                <div className="absolute inset-0 flex items-center justify-center z-10">
+                  <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+                </div>
+              )}
               <Image
                 src={image.src}
                 alt={image.alt}
                 fill
                 className="object-cover"
                 priority={index === 0}
+                onLoad={() => handleImageLoad(image.src)}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw"
               />
             </div>
           </SwiperSlide>
@@ -74,6 +89,7 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
                 alt={`Thumbnail ${index + 1}`}
                 fill
                 className="object-cover"
+                sizes="(max-width: 768px) 25vw, 10vw"
               />
             </SwiperSlide>
           ))}

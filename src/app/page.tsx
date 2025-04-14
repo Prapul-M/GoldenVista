@@ -13,7 +13,7 @@ export default function Home() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/villa-pilerne/villa-1.jpg"
+            src="/images/villa-pilerne/VILLA 4-1.jpg"
             alt="Luxury Real Estate in Pilerne, Goa"
             fill
             className="object-cover brightness-50"
@@ -104,7 +104,7 @@ export default function Home() {
             >
               <div className="relative h-[400px] overflow-hidden">
                 <Image
-                  src="/images/villa-pilerne/villa-1.jpg"
+                  src="/images/villa-pilerne/VILLA 4-1.jpg"
                   alt="Luxury Villa in Pilerne"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -134,7 +134,7 @@ export default function Home() {
             >
               <div className="relative h-[400px] overflow-hidden">
                 <Image
-                  src="/images/penthouse-terraces/penthouse-1.jpg"
+                  src="/images/penthouse-terraces/1.jpg"
                   alt="Luxury Penthouse in Pilerne"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -187,7 +187,7 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <Image
-                src="/images/villa-pilerne/villa-3.jpg"
+                src="/images/villa-pilerne/VILLA 4-3.jpg"
                 alt="Luxury Interior"
                 fill
                 className="object-cover rounded-lg shadow-xl"
