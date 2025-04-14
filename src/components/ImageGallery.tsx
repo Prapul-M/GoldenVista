@@ -42,7 +42,7 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
         pagination={{ clickable: true }}
         thumbs={{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }}
         modules={[Navigation, Pagination, Thumbs]}
-        className="h-[500px] md:h-[600px] mb-4 rounded-lg overflow-hidden"
+        className="h-[350px] sm:h-[400px] md:h-[500px] lg:h-[600px] mb-2 sm:mb-4 rounded-lg overflow-hidden"
         onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
       >
         {images.map((image, index) => (
@@ -50,7 +50,7 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
             <div className="absolute inset-0 flex items-center justify-center bg-gray-900/50">
               {!imagesLoaded[image.src] && (
                 <div className="absolute inset-0 flex items-center justify-center z-10">
-                  <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+                  <div className="w-10 h-10 sm:w-16 sm:h-16 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
                 </div>
               )}
               <Image
@@ -60,22 +60,32 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
                 className="object-cover"
                 priority={index === 0}
                 onLoad={() => handleImageLoad(image.src)}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw"
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw"
               />
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
 
-      <div className="mt-4">
+      <div className="mt-2 sm:mt-4">
         <Swiper
           onSwiper={setThumbsSwiper}
-          spaceBetween={10}
-          slidesPerView={4}
+          spaceBetween={8}
+          slidesPerView={3}
+          breakpoints={{
+            480: {
+              slidesPerView: 4,
+              spaceBetween: 8,
+            },
+            768: {
+              slidesPerView: 4,
+              spaceBetween: 10,
+            }
+          }}
           freeMode={true}
           watchSlidesProgress={true}
           modules={[FreeMode, Navigation, Thumbs]}
-          className="thumbnail-swiper h-24"
+          className="thumbnail-swiper h-16 sm:h-20 md:h-24"
         >
           {images.map((image, index) => (
             <SwiperSlide key={index} className="cursor-pointer relative rounded-md overflow-hidden">
@@ -89,7 +99,7 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
                 alt={`Thumbnail ${index + 1}`}
                 fill
                 className="object-cover"
-                sizes="(max-width: 768px) 25vw, 10vw"
+                sizes="(max-width: 640px) 33vw, (max-width: 768px) 25vw, 10vw"
               />
             </SwiperSlide>
           ))}

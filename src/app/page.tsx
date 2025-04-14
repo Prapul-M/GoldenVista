@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center">
+      <section className="relative h-[90vh] md:h-screen flex items-center justify-center">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -22,9 +22,9 @@ export default function Home() {
         </div>
         
         {/* Hero Content */}
-        <div className="container-custom relative z-10 text-center text-white">
+        <div className="container-custom relative z-10 text-center text-white px-4 sm:px-6">
           <motion.h1 
-            className="font-serif text-5xl md:text-7xl font-medium mb-6"
+            className="font-serif text-4xl sm:text-5xl md:text-7xl font-medium mb-4 md:mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -33,7 +33,7 @@ export default function Home() {
           </motion.h1>
           
           <motion.p 
-            className="text-xl md:text-2xl mb-12 max-w-3xl mx-auto"
+            className="text-lg sm:text-xl md:text-2xl mb-8 md:mb-12 max-w-3xl mx-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -47,10 +47,10 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <Link href="/villa" className="btn-primary">
+            <Link href="/villa" className="btn-primary w-full sm:w-auto">
               Explore Villa
             </Link>
-            <Link href="/penthouse" className="btn-secondary">
+            <Link href="/penthouse" className="btn-secondary w-full sm:w-auto">
               Explore Penthouse
             </Link>
           </motion.div>
@@ -71,10 +71,10 @@ export default function Home() {
       </section>
       
       {/* Property Preview Section */}
-      <section className="py-24 bg-accent">
+      <section className="py-16 md:py-24 bg-accent">
         <div className="container-custom">
           <motion.h2 
-            className="section-title text-center"
+            className="section-title text-center px-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -84,7 +84,7 @@ export default function Home() {
           </motion.h2>
           
           <motion.p 
-            className="section-subtitle text-center"
+            className="section-subtitle text-center px-4"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -93,7 +93,7 @@ export default function Home() {
             Discover elegance and comfort in these handpicked luxury properties in Pilerne, Goa.
           </motion.p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mt-12 md:mt-16 px-4 sm:px-6">
             {/* Villa Preview */}
             <motion.div
               className="relative group overflow-hidden shadow-xl"
@@ -102,7 +102,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <div className="relative h-[400px] overflow-hidden">
+              <div className="relative h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden">
                 <Image
                   src="/images/villa-pilerne/VILLA 4-1.jpg"
                   alt="Luxury Villa in Pilerne"
@@ -110,17 +110,17 @@ export default function Home() {
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                <div className="absolute bottom-0 left-0 p-8 text-white">
-                  <h3 className="font-serif text-3xl mb-2">Luxury Villa</h3>
-                  <p className="mb-4">3 BHK, 2,258.27 sq ft, Pilerne</p>
-                  <p className="text-2xl text-primary font-medium">₹4.8 Cr</p>
+                <div className="absolute bottom-0 left-0 p-4 sm:p-6 md:p-8 text-white">
+                  <h3 className="font-serif text-2xl sm:text-3xl mb-1 sm:mb-2">Luxury Villa</h3>
+                  <p className="mb-2 sm:mb-4 text-sm sm:text-base">3 BHK, 2,258.27 sq ft, Pilerne</p>
+                  <p className="text-xl sm:text-2xl text-primary font-medium">₹4.8 Cr</p>
                 </div>
               </div>
               <Link 
                 href="/villa" 
                 className="absolute inset-0 z-10 flex items-center justify-center bg-primary/0 opacity-0 group-hover:bg-primary/80 group-hover:opacity-100 transition-all duration-300"
               >
-                <span className="border-2 border-white text-white px-6 py-2 font-medium">View Details</span>
+                <span className="border-2 border-white text-white px-4 sm:px-6 py-2 font-medium">View Details</span>
               </Link>
             </motion.div>
             
@@ -132,7 +132,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <div className="relative h-[400px] overflow-hidden">
+              <div className="relative h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden">
                 <Image
                   src="/images/penthouse-terraces/1.jpg"
                   alt="Luxury Penthouse in Pilerne"
@@ -140,17 +140,17 @@ export default function Home() {
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                <div className="absolute bottom-0 left-0 p-8 text-white">
-                  <h3 className="font-serif text-3xl mb-2">Luxury Penthouse</h3>
-                  <p className="mb-4">3 BHK, 2,000 sq ft, The Terraces</p>
-                  <p className="text-2xl text-primary font-medium">₹4.8 Cr</p>
+                <div className="absolute bottom-0 left-0 p-4 sm:p-6 md:p-8 text-white">
+                  <h3 className="font-serif text-2xl sm:text-3xl mb-1 sm:mb-2">Luxury Penthouse</h3>
+                  <p className="mb-2 sm:mb-4 text-sm sm:text-base">3 BHK, 2,000 sq ft, The Terraces</p>
+                  <p className="text-xl sm:text-2xl text-primary font-medium">₹4.8 Cr</p>
                 </div>
               </div>
               <Link 
                 href="/penthouse" 
                 className="absolute inset-0 z-10 flex items-center justify-center bg-primary/0 opacity-0 group-hover:bg-primary/80 group-hover:opacity-100 transition-all duration-300"
               >
-                <span className="border-2 border-white text-white px-6 py-2 font-medium">View Details</span>
+                <span className="border-2 border-white text-white px-4 sm:px-6 py-2 font-medium">View Details</span>
               </Link>
             </motion.div>
           </div>
@@ -158,16 +158,16 @@ export default function Home() {
       </section>
       
       {/* About Section */}
-      <section className="py-24 bg-white">
+      <section className="py-16 md:py-24 bg-white">
         <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center px-4 sm:px-6">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="section-title">Experience Luxury Living in Goa</h2>
+              <h2 className="section-title text-3xl md:text-4xl lg:text-5xl">Experience Luxury Living in Goa</h2>
               <p className="text-gray-600 mb-6">
                 Located in the serene neighborhood of Pilerne, our properties offer the perfect blend of luxury and comfort with easy access to Goa's pristine beaches.
               </p>
@@ -180,7 +180,7 @@ export default function Home() {
             </motion.div>
             
             <motion.div
-              className="relative h-[500px]"
+              className="relative h-[350px] md:h-[500px]"
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -198,10 +198,10 @@ export default function Home() {
       </section>
       
       {/* Call to Action */}
-      <section className="py-24 bg-secondary text-white">
-        <div className="container-custom text-center">
+      <section className="py-16 md:py-24 bg-secondary text-white">
+        <div className="container-custom text-center px-4 sm:px-6">
           <motion.h2 
-            className="font-serif text-4xl md:text-5xl font-medium mb-8"
+            className="font-serif text-3xl sm:text-4xl md:text-5xl font-medium mb-6 md:mb-8"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -211,7 +211,7 @@ export default function Home() {
           </motion.h2>
           
           <motion.p 
-            className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto"
+            className="text-lg sm:text-xl text-gray-300 mb-8 md:mb-12 max-w-2xl mx-auto"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -226,7 +226,7 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <Link href="/contact" className="bg-primary text-white px-8 py-4 text-lg font-medium hover:bg-white hover:text-primary transition-colors duration-300">
+            <Link href="/contact" className="bg-primary text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium hover:bg-white hover:text-primary transition-colors duration-300">
               Contact Us Now
             </Link>
           </motion.div>

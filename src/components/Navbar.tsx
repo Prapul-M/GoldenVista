@@ -25,25 +25,25 @@ const Navbar = () => {
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white shadow-md py-3'
-          : 'bg-transparent py-6'
+          ? 'bg-white shadow-md py-2 sm:py-3'
+          : 'bg-transparent py-4 sm:py-6'
       }`}
     >
-      <div className="container-custom flex justify-between items-center">
-        <Link href="/" className="font-serif text-2xl font-bold">
+      <div className="container-custom flex justify-between items-center px-4 sm:px-6">
+        <Link href="/" className="font-serif text-xl sm:text-2xl font-bold">
           <span className="text-primary">Golden</span>
           <span className={isScrolled ? 'text-secondary' : 'text-white'}>Vista</span>
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-8">
+        <div className="hidden md:flex space-x-4 lg:space-x-8">
           {['Home', 'Villa', 'Penthouse', 'Contact'].map((item) => (
             <Link
               key={item}
               href={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
               className={`${
                 isScrolled ? 'text-secondary' : 'text-white'
-              } hover:text-primary transition-colors duration-300`}
+              } hover:text-primary transition-colors duration-300 text-sm lg:text-base`}
             >
               {item}
             </Link>
@@ -52,8 +52,9 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-primary"
+          className="md:hidden text-primary focus:outline-none"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -84,18 +85,18 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: 'auto' }}
+          exit={{ opacity: 0, height: 0 }}
           transition={{ duration: 0.3 }}
-          className="md:hidden bg-white py-4 px-6 shadow-lg"
+          className="md:hidden bg-white py-4 px-6 shadow-lg overflow-hidden"
         >
           <div className="flex flex-col space-y-4">
             {['Home', 'Villa', 'Penthouse', 'Contact'].map((item) => (
               <Link
                 key={item}
                 href={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
-                className="text-secondary hover:text-primary transition-colors duration-300"
+                className="text-secondary hover:text-primary transition-colors duration-300 py-2 text-lg border-b border-gray-100 last:border-b-0"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item}

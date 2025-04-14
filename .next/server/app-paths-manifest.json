@@ -1,7 +1,6 @@
 {
-  "/not-found": "app/not-found.js",
-  "/villa/page": "app/villa/page.js",
-  "/page": "app/page.js",
   "/contact/page": "app/contact/page.js",
-  "/penthouse/page": "app/penthouse/page.js"
+  "/villa/page": "app/villa/page.js",
+  "/penthouse/page": "app/penthouse/page.js",
+  "/page": "app/page.js"
 }
